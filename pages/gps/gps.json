@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cells": "weui-miniprogram/cells/cells",
+    "cell": "weui-miniprogram/cell/cell"
+  },
+  "navigationBarTitleText": "地图"
+}

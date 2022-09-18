@@ -1,0 +1,25 @@
+<view class="wholeContinaer" wx:if="{{onLine}}">
+	<map id="0" markers="{{markers}}" style="width:100%;height:100vh;" longitude="{{longitude}}" latitude="{{latitude}}" scale='16' show-location>
+	</map>
+
+	<view class="checkInPanel">
+		<view class="checkInBtn {{canClick ? '' : 'disableClick'}}" bindtap="checkIn">
+			<view class="checkInTitle">签到</view>
+			<view class="checkInTime">{{time}}</view>
+		</view>
+		<view class="whitePositionPanel">
+			<view class="positonTextRow">
+				<image class="positionIcon" src="../../images/zcxj/positionIcon.png"></image>
+				<view class="positionFont">{{addressName}}</view>
+			</view>
+		</view>
+		<view class="rePosition" bindtap="rePosition">
+			<image class="positionIcon" src="../../images/zcxj/rePosition.png"></image>
+			<view class="positionFont">重新定位</view>
+		</view>
+	</view>
+</view>
+<view wx:else class="offOnline">
+  <view>网络连接中断，请检查网络设置！</view>
+  <button type="primary" bindtap="rePosition">重新定位</button>
+</view> 
